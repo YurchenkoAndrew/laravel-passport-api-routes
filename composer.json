@@ -1,6 +1,6 @@
 {
     "name": "yurchenko-andrew/laravel-passport-api-routes",
-    "description": "description",
+    "description": "A package for implementing routes for registration (with email confirmation), authorization (with receiving an access token), requesting and changing the password.",
     "minimum-stability": "stable",
     "license": "MIT",
     "authors": [
