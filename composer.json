@@ -1,0 +1,28 @@
+{
+    "name": "yurchenko-andrew/laravel-passport-api-routes",
+    "description": "description",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrew",
+            "email": "andrew@wsa.kz",
+            "homepage": "https://github.com/YurchenkoAndrew/"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "YurchenkoAndrew\\LaravelPassportAPIRoutes\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "YurchenkoAndrew\\LaravelPassportAPIRoutes\\Providers\\LaravelPassportAPIRoutesServiceProvider"
+            ]
+        }
+    }
+}
