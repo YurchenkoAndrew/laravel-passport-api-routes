@@ -22,7 +22,9 @@ Route::prefix('api')->group(function () {
     Route::post('/login', LoginController::class);
 
     Route::get('email/verify/{id}', [RegisterVerificationController::class, 'verify'])->name('verification.verify');
-    Route::get('email/resend', [RegisterVerificationController::class, 'resend'])->name('verification.resend');
+    Route::get('email/resend', [RegisterVerificationController::class, 'resend'])
+        ->middleware('throttle:6,1')
+        ->name('verification.resend');
 
 //Сброс пароля
     Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])
