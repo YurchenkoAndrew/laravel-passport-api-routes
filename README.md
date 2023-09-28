@@ -14,6 +14,10 @@
 - Ссылка для обработки токена с почты: GET http://localhost/api/reset-password/{token}
 - Смена пароля: POST http://localhost/api/reset-password
 
+### <span style="color: lightgreen;"><center>Установка пакета:</center></span>
+
+> _<center>composer require yurchenko-andrew/laravel-passport-api-routes</center>_
+
 ## Предварительные требования:
 
 #### **1) Установленный и настроенный пакет Passport** _https://github.com/laravel/passport_
@@ -23,7 +27,7 @@
   - >PASSPORT_CLIENT_SECRET=_l5VoxzUGbXrKh2jvNtQAwji7p2ImXcSMdv4rwCZ6_ (_обязательно установить_)
 ## <center>Получение значений для </center>
 
-### <center><span style="color: green;">PASSPORT_CLIENT_SECRET</span> и <span style="color: green;">PASSPORT_CLIENT_SECRET</span></center>
+### <center><span style="color: lightgreen;">PASSPORT_CLIENT_SECRET</span> и <span style="color: lightgreen;">PASSPORT_CLIENT_SECRET</span></center>
 #### Сначала устанавливаем пакет Passport через composer командой 
 - >_composer require laravel/passport_
 
