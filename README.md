@@ -22,36 +22,40 @@
 
 #### **1) Установленный и настроенный пакет Passport** _https://github.com/laravel/passport_
 - ### Установленные переменные окружения в .env файле
-  - >APP_URL=http://localhost (по умолчанию http://localhost)
-  - >PASSPORT_CLIENT_SECRET=_2_ (по умолчанию - _2_)
-  - >PASSPORT_CLIENT_SECRET=_l5VoxzUGbXrKh2jvNtQAwji7p2ImXcSMdv4rwCZ6_ (_обязательно установить_)
+  >APP_URL=http://localhost (по умолчанию http://localhost)
+  > 
+  >PASSPORT_CLIENT_SECRET=_2_ (по умолчанию - _2_)
+  > 
+  >PASSPORT_CLIENT_SECRET=_l5VoxzUGbXrKh2jvNtQAwji7p2ImXcSMdv4rwCZ6_ 
+  > 
+  > _<center>(обязательно установить)</center>_
 ## <center>Получение значений для </center>
 
 ### <center><span style="color: lightgreen;">PASSPORT_CLIENT_SECRET</span> и <span style="color: lightgreen;">PASSPORT_CLIENT_SECRET</span></center>
 #### Сначала устанавливаем пакет Passport через composer командой 
-- >_composer require laravel/passport_
+>_composer require laravel/passport_
 
 #### Далее выполняем миграции
-- >_php artisan migrate_
+>_php artisan migrate_
   
-_Далее вам следует выполнить passport:install команду Artisan. Эта команда создаст ключи шифрования, необходимые для создания токенов безопасного доступа. Кроме того, команда создаст клиентов «персонального доступа» и «предоставления пароля», которые будут использоваться для генерации токенов доступа:_
+_Далее вам следует выполнить passport:install команду Artisan. Эта команда создаст ключи шифрования, необходимые для создания токенов безопасного доступа. Кроме того, команда создаст клиентов «персонального доступа» и «<span style="color: lightblue;">предоставления пароля</span>», которые будут использоваться для генерации токенов доступа:_
 
--  >_php artisan passport:install_
+>_php artisan passport:install_
    
-**_Нам нужны токены «предоставления пароля»_**
-### Получим подобный результат:
+**_Нам нужны токены «<span style="color: lightblue;">предоставления пароля</span>»_**
+### <center> Получим подобный результат:</center>
 
-- **Encryption keys generated successfully.**
-- >#### Personal access client created successfully.
-  Client ID: _1_
-
-  ~~Client secret: _sKbfWQiq4t28kTSZs1EOcJMsCsMK8ditgcmtQ0HC_~~
-- >#### Password grant client created successfully.
-  Client ID: _2_
-
-  Client secret: _l5VoxzUGbXrKh2jvNtQAwji7p2ImXcSMdv4rwCZ6_
-### Нам нужны именно:
->Password grant client created successfully.
+>_Encryption keys generated successfully._
+>#### Personal access client created successfully.
+>Client ID: _1_
+>
+>Client secret: _sKbfWQiq4t28kTSZs1EOcJMsCsMK8ditgcmtQ0HC_
+>#### Password grant client created successfully.
+>Client ID: _2_
+> 
+>Client secret: _l5VoxzUGbXrKh2jvNtQAwji7p2ImXcSMdv4rwCZ6_
+### <center><span style="color: lightgreen;">Нам нужны именно:</span></center>
+>#### Password grant client created successfully.
 >- Client ID: _2_
 >- Client secret: _l5VoxzUGbXrKh2jvNtQAwji7p2ImXcSMdv4rwCZ6_
 
