@@ -16,6 +16,8 @@ class LaravelPassportAPIRoutesServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/laravel-passport-api-routes.php' => config_path('laravel-passport-api-routes.php'),
             __DIR__.'/../lang' => $this->app->langPath('vendor/laravel-passport-api-routes'),
+            __DIR__.'/../routes/api.php' => base_path('routes/laravel_passport_api_routes.php'),
+
         ]);
         $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
         $this->loadTranslationsFrom(__DIR__.'/../lang', 'laravel-passport-api-routes');
