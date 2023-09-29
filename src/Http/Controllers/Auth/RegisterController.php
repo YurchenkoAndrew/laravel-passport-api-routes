@@ -2,12 +2,12 @@
 
 namespace YurchenkoAndrew\LaravelPassportAPIRoutes\Http\Controllers\Auth;
 
-use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Hash;
 use YurchenkoAndrew\LaravelPassportAPIRoutes\Http\Controllers\Controller;
 use YurchenkoAndrew\LaravelPassportAPIRoutes\Http\Requests\RegisterRequest;
+use YurchenkoAndrew\LaravelPassportAPIRoutes\Models\User;
 
 class RegisterController extends Controller
 {

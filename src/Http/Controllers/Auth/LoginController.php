@@ -2,13 +2,13 @@
 
 namespace YurchenkoAndrew\LaravelPassportAPIRoutes\Http\Controllers\Auth;
 
-use App\Models\User;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Http;
 use YurchenkoAndrew\LaravelPassportAPIRoutes\Http\Controllers\Controller;
 use YurchenkoAndrew\LaravelPassportAPIRoutes\Http\Requests\LoginRequest;
+use YurchenkoAndrew\LaravelPassportAPIRoutes\Models\User;
 
 class LoginController extends Controller
 {

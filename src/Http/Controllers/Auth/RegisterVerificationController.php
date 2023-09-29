@@ -2,11 +2,11 @@
 
 namespace YurchenkoAndrew\LaravelPassportAPIRoutes\Http\Controllers\Auth;
 
-use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use YurchenkoAndrew\LaravelPassportAPIRoutes\Http\Controllers\Controller;
+use YurchenkoAndrew\LaravelPassportAPIRoutes\Models\User;
 
 class RegisterVerificationController extends Controller
 {
