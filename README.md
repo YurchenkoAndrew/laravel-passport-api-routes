@@ -55,6 +55,9 @@
 >- Запрос на сброс пароля: POST http://localhost/api/forgot-password
 >  - Принимает:
 >   - email: max:50
+>  - Возвращает:
+>    - Ссылку на email для сброса пароля.
+>    - Иначе JSON Response: "This email address is not registered!"
 
 - Ссылка для обработки токена с почты: GET http://localhost/api/reset-password/{token}
 - Смена пароля: POST http://localhost/api/reset-password
