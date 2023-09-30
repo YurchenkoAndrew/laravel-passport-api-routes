@@ -3,6 +3,7 @@
 namespace YurchenkoAndrew\LaravelPassportAPIRoutes\Http\Controllers\Auth;
 
 use Auth;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use YurchenkoAndrew\LaravelPassportAPIRoutes\Http\Controllers\Controller;
@@ -24,6 +25,10 @@ class RegisterVerificationController extends Controller
     }
 
 
+    /**
+     * @param ResendRegisterVerificationRequest $request
+     * @return JsonResponse
+     */
     public function resend(ResendRegisterVerificationRequest $request)
     {
         $user = User::where('email', $request->input('email'))->first();

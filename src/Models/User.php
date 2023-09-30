@@ -49,6 +49,10 @@ class User extends Authenticatable implements MustVerifyEmail, ShouldQueue
         'password' => 'hashed',
     ];
 
+    /**
+     * @param string $password
+     * @return bool
+     */
     public function validateForPassportPasswordGrant(string $password): bool
     {
         return Hash::check($password, $this->password);
