@@ -12,7 +12,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 /**
  * @method static findOrFail($user_id)
- * @method static where(string $string, string $input)
+ * @method static where(string $field, string $input)
  */
 class User extends Authenticatable implements MustVerifyEmail, ShouldQueue
 {

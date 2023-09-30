@@ -23,6 +23,7 @@ class RegisterVerificationController extends Controller
         return redirect(config('laravel-passport-api-routes.app-front-url') . config('laravel-passport-api-routes.after-register-email-confirmation-route'))->with(['message' => 'laravel-passport-api-routes::register.registration_successful'], Response::HTTP_OK);
     }
 
+
     public function resend(ResendRegisterVerificationRequest $request)
     {
         $user = User::where('email', $request->input('email'))->first();
