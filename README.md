@@ -59,8 +59,21 @@
 >    - Ссылку на email для сброса пароля.
 >    - Иначе JSON Response: "This email address is not registered!"
 
-- Ссылка для обработки токена с почты: GET http://localhost/api/reset-password/{token}
-- Смена пароля: POST http://localhost/api/reset-password
+>- Ссылка для обработки токена с почты: GET http://localhost/api/reset-password/{token}
+>  - Принимает:
+>    - Ссылку с email для сброса пароля
+>  - Возвращает:
+>    - Token для сброса пароля.
+
+>- Смена пароля: POST http://localhost/api/reset-password
+>  - Принимает:
+>    - Token для сброса пароля,
+>    - email: max:50 (того пользователя, которому меняется пароль)
+>    - password: min:8 (новый пароль)
+>    - password_confirmation: min:8 (подтверждение нового пароля)
+>  - Возвращает:
+>    - При успешном завершении JSON Response: "Password changed! Log in with a new password!",
+>    - Или сообщение об ошибке, которая произошла. (некорректно заполнены поля, невалидный email и т.п.)
 
 ### <span style="color: lightgreen;"><center>Установка пакета:</center></span>
 
