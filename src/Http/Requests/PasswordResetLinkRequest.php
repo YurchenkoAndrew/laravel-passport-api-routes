@@ -9,7 +9,7 @@ class PasswordResetLinkRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => ['required', 'email', 'max:254'],
+            'email' => ['required', 'email', 'max:50'],
         ];
     }
 

@@ -10,8 +10,8 @@ class NewPasswordStoreRequest extends FormRequest
     {
         return [
             'token' => 'required',
-            'email' => ['required', 'email', 'max:254'],
-            'password' => 'required|string|confirmed|min:6',
+            'email' => ['required', 'email', 'max:50'],
+            'password' => 'required|string|confirmed|min:8',
         ];
     }
 
