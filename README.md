@@ -24,14 +24,14 @@
 - ### Установленные переменные окружения в .env файле
   >APP_URL=http://localhost (по умолчанию http://localhost)
   > 
-  >PASSPORT_CLIENT_SECRET=_2_ (по умолчанию - _2_)
+  >PASSPORT_CLIENT=_2_ (по умолчанию - _2_)
   > 
   >PASSPORT_CLIENT_SECRET=_l5VoxzUGbXrKh2jvNtQAwji7p2ImXcSMdv4rwCZ6_ 
   > 
   > _<center>(обязательно установить)</center>_
 ## <center>Получение значений для </center>
 
-### <center><span style="color: lightgreen;">PASSPORT_CLIENT_SECRET</span> и <span style="color: lightgreen;">PASSPORT_CLIENT_SECRET</span></center>
+### <center><span style="color: lightgreen;">PASSPORT_CLIENT</span> и <span style="color: lightgreen;">PASSPORT_CLIENT_SECRET</span></center>
 #### Сначала устанавливаем пакет Passport через composer командой 
 >_composer require laravel/passport_
 
