@@ -41,8 +41,21 @@
 >  - Возвращает:
 >    - В случае успешного завершения, переадресацию на [APP_FRONT_URL + AFTER_REGISTER_EMAIL_CONFIRMATION_ROUTE](http://localhost:4200/auth/login?verified=true) с JSON Response: "Your registration has been successfully confirmed! You can log in."
 >    - В ином случае JSON Response: "Invalid or expired token specified!"
-- Перезапрос токена проверки электронной почты: GET http://localhost/api/email/resend
-- Запрос на сброс пароля: POST http://localhost/api/forgot-password
+
+
+>- Перезапрос токена проверки электронной почты: POST http://localhost/api/email/resend
+>  - Принимает:
+>    - email: max:50
+>  - Возвращает:
+>    - Если такой email был зарегистрирован, то ссылку на email для подтверждения регистрации.
+>    - Если такого email не регистрировалось, то JSON Response: "The user with this email is not registered!".
+>    - Если email уже был подтвержден, то JSON Response: "Email has already been confirmed."
+
+
+>- Запрос на сброс пароля: POST http://localhost/api/forgot-password
+>  - Принимает:
+>   - email: max:50
+
 - Ссылка для обработки токена с почты: GET http://localhost/api/reset-password/{token}
 - Смена пароля: POST http://localhost/api/reset-password
 
