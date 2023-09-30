@@ -9,7 +9,7 @@ class LaravelPassportAPIRoutesServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/laravel-passport-api-routes.php','laravel-passport-api-routes.php'
+            __DIR__.'/../config/laravel-passport-api-routes.php','laravel-passport-api-routes'
         );
     }
 
