@@ -29,7 +29,7 @@ class RegisterVerificationController extends Controller
      * @param ResendRegisterVerificationRequest $request
      * @return JsonResponse
      */
-    public function resend(ResendRegisterVerificationRequest $request)
+    public function resend(ResendRegisterVerificationRequest $request): JsonResponse
     {
         $user = User::where('email', $request->input('email'))->first();
         if ($user) {
