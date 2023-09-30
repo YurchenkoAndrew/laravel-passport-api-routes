@@ -10,7 +10,7 @@ use YurchenkoAndrew\LaravelPassportAPIRoutes\Models\User;
 
 class RegisterVerificationController extends Controller
 {
-    public function verify($user_id, Request $request): JsonResponse
+    public function verify($user_id, Request $request)
     {
         if (!$request->hasValidSignature()) {
             return response()->json(__('laravel-passport-api-routes::register.invalid_token'), Response::HTTP_BAD_GATEWAY);
@@ -19,7 +19,7 @@ class RegisterVerificationController extends Controller
         if (!$user->hasVerifiedEmail()) {
             $user->markEmailAsVerified();
         }
-        return \response()->json(['message' => __('laravel-passport-api-routes::register.registration_successful')], Response::HTTP_OK);
+        return redirect(config('laravel-passport-api-routes.app-front-url') . config('laravel-passport-api-routes.after-register-email-confirmation-route'))->with(['message' => 'laravel-passport-api-routes::register.registration_successful'], Response::HTTP_OK);
     }
 
     public function resend(): JsonResponse
