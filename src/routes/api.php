@@ -22,7 +22,7 @@ Route::prefix('api')->group(function () {
     Route::post('/login', LoginController::class);
 
     Route::get('email/verify/{id}', [RegisterVerificationController::class, 'verify'])->name('verification.verify');
-    Route::get('email/resend', [RegisterVerificationController::class, 'resend'])
+    Route::post('email/resend', [RegisterVerificationController::class, 'resend'])
         ->middleware('throttle:6,1')
         ->name('verification.resend');
 
